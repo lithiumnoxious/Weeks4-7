@@ -13,4 +13,7 @@ public class move : MonoBehaviour
     {
         transform.position += transform.right * 5 * Time.deltaTime;
     }
+
+
+
 }
