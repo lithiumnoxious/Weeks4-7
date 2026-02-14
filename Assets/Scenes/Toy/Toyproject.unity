@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1356350267}
   - component: {fileID: 1356350266}
+  - component: {fileID: 1356350268}
   m_Layer: 0
   m_Name: ocean back
   m_TagString: Untagged
@@ -343,6 +344,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356350268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356350265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d1a22bdaa4d144a23582608c64fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0031673312
+      value: 0.9369436
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3581909
+      value: 0.7984021
+      inSlope: -0.11462408
+      outSlope: -0.11462408
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46411645
+      outWeight: 0.115383185
+    - serializedVersion: 3
+      time: 0.54216564
+      value: 0.97040313
+      inSlope: 0.095320545
+      outSlope: 0.095320545
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1.0061316
+      value: 0.9473233
+      inSlope: 0.040261116
+      outSlope: 0.040261116
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.29645532
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 1
 --- !u!1 &1912964634
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983457013}
   - component: {fileID: 1983457012}
+  - component: {fileID: 1983457014}
   m_Layer: 0
   m_Name: ocean front
   m_TagString: Untagged
@@ -561,6 +618,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1983457014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983457011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d1a22bdaa4d144a23582608c64fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00032109022
+      value: -7.200472
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.30401284
+      value: -6.937109
+      inSlope: 0.43422312
+      outSlope: 0.43422312
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6888566
+      value: -6.9174576
+      inSlope: -1.6819805
+      outSlope: -1.6819805
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0174614
+      value: -7.1892433
+      inSlope: 0.040261116
+      outSlope: 0.040261116
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.29645532
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
