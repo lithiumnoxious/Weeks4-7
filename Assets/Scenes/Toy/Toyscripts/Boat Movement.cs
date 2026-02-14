@@ -10,6 +10,9 @@ public class BoatMovement : MonoBehaviour
     public bool a,d = false;
     public float boatspeed;
     public float posX;
+    public float wcreen;
+    Vector2 bottomleft;
+    Vector2 topRight;
     //public bool facingleft = false;
     public SpriteRenderer sprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,18 +20,24 @@ public class BoatMovement : MonoBehaviour
     {
         //getting sprite component so I can flip it when it goes left
         sprite = GetComponent<SpriteRenderer>();
+        //getting screen borders
+        bottomleft = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
+        topRight = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         //multiple ways for the ship to move
         left = Keyboard.current.leftArrowKey.isPressed;
         a = Keyboard.current.aKey.isPressed;
         right = Keyboard.current.rightArrowKey.isPressed;
         d = Keyboard.current.dKey.isPressed;
 
-        if (left || a)
+        
+        //movement
+        if ((left || a) && (posX >= bottomleft.x))
         {
             Vector2 newPos = transform.position;
             newPos.x -= boatspeed * Time.deltaTime;
@@ -37,7 +46,7 @@ public class BoatMovement : MonoBehaviour
             //facingleft = true;
             sprite.flipX = true;
         }
-        if (right || d)
+        if ((right || d) && (posX <= topRight.x))
         {
             Vector2 newPos = transform.position;
             newPos.x += boatspeed * Time.deltaTime;
