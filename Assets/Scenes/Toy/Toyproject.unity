@@ -1011,8 +1011,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1797085914}
   - {fileID: 1498260630}
+  - {fileID: 1797085914}
   - {fileID: 434998597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1311,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498260630}
   - component: {fileID: 1498260631}
+  - component: {fileID: 1498260632}
   m_Layer: 0
   m_Name: sliderwheel
   m_TagString: Untagged
@@ -1390,6 +1391,24 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1498260632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498260629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66f455dfc9422449a60eafc82e0959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 0
+  right: 0
+  steerVal: 5
+  steerValMax: 10
+  steerSpeed: 0
+  steer: {fileID: 1498260631}
 --- !u!1 &1700611323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,8 +2010,8 @@ Transform:
   m_GameObject: {fileID: 1999330445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.31, z: 0}
-  m_LocalScale: {x: 10.387266, y: 6.7537885, z: 6.0851}
+  m_LocalPosition: {x: 0, y: -6.22, z: 0}
+  m_LocalScale: {x: 13.228786, y: 6.9347897, z: 6.0851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1912964637}
