@@ -5,8 +5,8 @@ using UnityEngine.UIElements.Experimental;
 
 public class BoatMovement : MonoBehaviour
 {
-    public bool left = false;
-    public bool right = false;
+    //public bool left = false;
+    //public bool right = false;
     public bool a,d = false;
     public float boatspeed;
     public float posX;
@@ -29,15 +29,17 @@ public class BoatMovement : MonoBehaviour
     void Update()
     {
         
-        //multiple ways for the ship to move
-        left = Keyboard.current.leftArrowKey.isPressed;
+        //it was supposed to be multiple ways for the ship to move
+        // but it kept interacting with the slider
+        //so thats why left and right are moved to aiming the cannon
+        //left = Keyboard.current.leftArrowKey.isPressed;
         a = Keyboard.current.aKey.isPressed;
-        right = Keyboard.current.rightArrowKey.isPressed;
+        //right = Keyboard.current.rightArrowKey.isPressed;
         d = Keyboard.current.dKey.isPressed;
 
         
         //movement
-        if ((left || a) && (posX >= bottomleft.x))
+        if ((a) && (posX >= bottomleft.x))
         {
             Vector2 newPos = transform.position;
             newPos.x -= boatspeed * Time.deltaTime;
@@ -46,7 +48,7 @@ public class BoatMovement : MonoBehaviour
             //facingleft = true;
             sprite.flipX = true;
         }
-        if ((right || d) && (posX <= topRight.x))
+        if ((d) && (posX <= topRight.x))
         {
             Vector2 newPos = transform.position;
             newPos.x += boatspeed * Time.deltaTime;
