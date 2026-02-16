@@ -710,6 +710,8 @@ MonoBehaviour:
   pointVal: 0
   rotospeed: 100
   steer: {fileID: 1498260631}
+  left: 0
+  right: 0
   boat: {fileID: 1912964638}
 --- !u!1 &1045966899
 GameObject:
@@ -1410,9 +1412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: 0
   right: 0
-  steerVal: 15
+  steerVal: 25
   steerValMax: 50
-  steerSpeed: 10
+  steerSpeed: 25
   steer: {fileID: 1498260631}
 --- !u!1 &1700611323
 GameObject:

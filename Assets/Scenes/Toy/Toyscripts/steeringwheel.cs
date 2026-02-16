@@ -28,12 +28,12 @@ public class steeringwheel : MonoBehaviour
         left = Keyboard.current.leftArrowKey.isPressed;
         right = Keyboard.current.rightArrowKey.isPressed;
 
-        if (left && steerVal > 13.5)
+        if (left && steerVal > 10)
         {
             steerVal -= steerSpeed * Time.deltaTime;
             steer.value = steerVal;
         }
-        if (right && steerVal < 36.5)
+        if (right && steerVal < 40)
         {
             steerVal += steerSpeed * Time.deltaTime;
             steer.value = steerVal;

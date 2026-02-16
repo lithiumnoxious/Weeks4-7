@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class cannon : MonoBehaviour
 {
     public float pointVal;
-    public float rotospeed = 10;
+    public float rotospeed = 5;
     public Slider steer;
+    public bool left, right = false;
 
     public BoatMovement boat;
 
@@ -25,16 +26,34 @@ public class cannon : MonoBehaviour
         
         Vector3 newRot = transform.eulerAngles;
         newRot.z = pointVal;
-        
+
+        ////rotating left
+        //if (pointVal >= steer.value)
+        //{
+        //    newRot.z -= rotospeed * Time.deltaTime;
+        //    transform.eulerAngles = newRot;
+        //}
+
+        ////rotating right
+        //if (pointVal <= steer.value)
+        //{
+        //    newRot.z += rotospeed * Time.deltaTime;
+        //    transform.eulerAngles = newRot;
+        //}
+        //pointVal = newRot.z;
+
+        left = Keyboard.current.leftArrowKey.isPressed;
+        right = Keyboard.current.rightArrowKey.isPressed;
+
         //rotating left
-        if (pointVal >= steer.value)
+        if (left && pointVal > -40)
         {
             newRot.z -= rotospeed * Time.deltaTime;
             transform.eulerAngles = newRot;
         }
 
         //rotating right
-        if (pointVal <= steer.value - 63.5)
+        if (right && pointVal < 40)
         {
             newRot.z += rotospeed * Time.deltaTime;
             transform.eulerAngles = newRot;
