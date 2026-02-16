@@ -7,9 +7,9 @@ public class steeringwheel : MonoBehaviour
     public bool left = false;
     public bool right = false;
 
-    public float steerVal = 5;
-    public float steerValMax = 10;
-    public float steerSpeed = 1;
+    public float steerVal = 25;
+    public float steerValMax = 50;
+    public float steerSpeed = 2f;
     public Slider steer;
 
 
@@ -28,24 +28,17 @@ public class steeringwheel : MonoBehaviour
         left = Keyboard.current.leftArrowKey.isPressed;
         right = Keyboard.current.rightArrowKey.isPressed;
 
-        if (left && steerVal > 2.5)
+        if (left && steerVal > 13.5)
         {
-            steerVal -= 0.1f;
+            steerVal -= steerSpeed * Time.deltaTime;
             steer.value = steerVal;
         }
-        if (right && steerVal < 7.5)
+        if (right && steerVal < 36.5)
         {
-            steerVal += 0.1f;
+            steerVal += steerSpeed * Time.deltaTime;
             steer.value = steerVal;
         }
-        
 
-
-        //steerVal += (steerSpeed * Time.deltaTime);
-        //if (steerVal > steerValMax)
-        //{
-        //    steerVal = 0;
-        //}
         steer.value = steerVal;
 
     }

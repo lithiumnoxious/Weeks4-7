@@ -29,12 +29,7 @@ public class BoatMovement : MonoBehaviour
     void Update()
     {
         
-        //it was supposed to be multiple ways for the ship to move
-        // but it kept interacting with the slider
-        //so thats why left and right are moved to aiming the cannon
-        //left = Keyboard.current.leftArrowKey.isPressed;
         a = Keyboard.current.aKey.isPressed;
-        //right = Keyboard.current.rightArrowKey.isPressed;
         d = Keyboard.current.dKey.isPressed;
 
         
@@ -58,15 +53,5 @@ public class BoatMovement : MonoBehaviour
             sprite.flipX = false;
         }
 
-
-        //extra code meant to check which direction the ship was facing
-        //if (facingleft)
-        //{
-        //    sprite.flipX = true;
-        //}
-        //if (!facingleft)
-        //{
-        //    sprite.flipX = false;
-        //}
     }
 }
