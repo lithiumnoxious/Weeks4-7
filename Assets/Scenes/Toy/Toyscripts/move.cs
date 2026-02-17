@@ -13,7 +13,8 @@ public class Bulletmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+     //basic movement to the right
+     //but in the case of the bullet it moves in the direction its pointed
         transform.position += transform.right * speed * Time.deltaTime;
 
     }

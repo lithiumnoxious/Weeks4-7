@@ -5,15 +5,12 @@ using UnityEngine.UIElements.Experimental;
 
 public class BoatMovement : MonoBehaviour
 {
-    //public bool left = false;
-    //public bool right = false;
     public bool a,d = false;
     public float boatspeed;
     public float posX;
     public float wcreen;
     Vector2 bottomleft;
     Vector2 topRight;
-    //public bool facingleft = false;
     public SpriteRenderer sprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

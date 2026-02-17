@@ -29,6 +29,7 @@ public class bulletspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //every 2 seconds the alien spawns
         if (time > 2)
         {
 
@@ -42,7 +43,8 @@ public class bulletspawner : MonoBehaviour
             time += 1 * Time.deltaTime;
         }
 
-
+        //when a bullet gets close to an alien they are both removed from the arraylist
+        //they are also destroyed
         for (int i = bullets.Count - 1; i >= 0; i--)
         {
             GameObject bullet = bullets[i];
@@ -80,7 +82,6 @@ public class bulletspawner : MonoBehaviour
         //basically I wanted the spawned bullet prefab to be rotated in the same direction as when it was fired
 
         //spawnedbullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
-
         spawnedbullet = Instantiate(bulletPrefab, spawnPos.position, spawnPos.transform.rotation);
         bulletsr = spawnedbullet.GetComponent<SpriteRenderer>();
         bullets.Add( spawnedbullet );

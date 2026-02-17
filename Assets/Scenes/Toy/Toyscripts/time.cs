@@ -28,10 +28,13 @@ public class time : MonoBehaviour
         
         if (timerVal <= 0)
         {
+        //if time is reduced player loses
             Debug.Log("you lose");
             limit.text = "you lose";
         }
-        else
+        else 
+        //reduces time until it hits time limit
+        //updates text so it shows what current time is
         {
             timerVal -= (timespeed * Time.deltaTime);
             timeslider.value = timerVal;

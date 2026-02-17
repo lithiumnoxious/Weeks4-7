@@ -13,6 +13,7 @@ public class oceancurrent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //curve to make a bobbing ocean
         t += Time.deltaTime;
         if (t > 1)
         {

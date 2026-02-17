@@ -17,7 +17,7 @@ public class steeringwheel : MonoBehaviour
     void Start()
     {
         steer = GetComponent<Slider>();
-        
+        //updates the value of the steering wheel to be the same as the float
         steer.maxValue = steerValMax;
 
     }
@@ -27,7 +27,8 @@ public class steeringwheel : MonoBehaviour
     {
         left = Keyboard.current.leftArrowKey.isPressed;
         right = Keyboard.current.rightArrowKey.isPressed;
-
+        //stops the steeringVal to be too high or too low
+        //this is used as a method to limit player range
         if (left && steerVal > 10)
         {
             steerVal -= steerSpeed * Time.deltaTime;
