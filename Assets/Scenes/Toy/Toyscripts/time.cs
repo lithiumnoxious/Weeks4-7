@@ -25,13 +25,18 @@ public class time : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerVal -= (timespeed * Time.deltaTime);
+        
         if (timerVal <= 0)
         {
-            timerVal = timeMax;
+            Debug.Log("you lose");
+            limit.text = "you lose";
         }
-        timeslider.value = timerVal;
+        else
+        {
+            timerVal -= (timespeed * Time.deltaTime);
+            timeslider.value = timerVal;
 
-        limit.text = timerVal.ToString();
+            limit.text = timerVal.ToString();
+        }
     }
 }
