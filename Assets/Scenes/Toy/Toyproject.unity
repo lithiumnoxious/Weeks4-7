@@ -687,12 +687,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b435f8d42c0a44689e372f2f51ca60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPos: {fileID: 643268657}
   bulletPrefab: {fileID: 1488620152584332804, guid: 7f4df3a0c445a91468c42049f3f96467, type: 3}
   spawnedbullet: {fileID: 0}
-  CannonScript: {fileID: 0}
-  spawner: {fileID: 643268656}
   bulletsr: {fileID: 4091374699786722374, guid: 7f4df3a0c445a91468c42049f3f96467, type: 3}
   Bullets: []
+  time: 0
+  spawnP: {fileID: 1209419372}
+  AlienPrefab: {fileID: 7433948470768528624, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
+  SpawnedAlien: {fileID: 0}
+  aliensr: {fileID: 6670331322464788849, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
+  aliens: []
 --- !u!1 &889913572
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +824,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045966899}
   m_CullTransparentMesh: 1
+--- !u!1 &1209419371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209419372}
+  m_Layer: 0
+  m_Name: alienspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1209419372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209419371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1238738700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,63 +2164,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134600343}
   m_CullTransparentMesh: 1
---- !u!1001 &8531901193154346030
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.91099596
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.3050404
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957413127755410649, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433948470768528624, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
-      propertyPath: m_Name
-      value: space invader
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ad6a0f74ffd206c438eb030e1fb6e3dc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2194,6 +2173,6 @@ SceneRoots:
   - {fileID: 1356350267}
   - {fileID: 543794134}
   - {fileID: 1912964637}
+  - {fileID: 1209419372}
   - {fileID: 1260050042}
   - {fileID: 127105708}
-  - {fileID: 8531901193154346030}

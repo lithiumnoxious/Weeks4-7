@@ -1,15 +1,21 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class bulletspawner : MonoBehaviour
 {
+    public Transform spawnPos;
     public GameObject bulletPrefab;
     public GameObject spawnedbullet;
-
     public SpriteRenderer bulletsr;
     public List <GameObject> Bullets;
-    public Transform spawnPos;
+
+    public float time = 0;
+    public Transform spawnP;
+    public GameObject AlienPrefab;
+    public GameObject SpawnedAlien;
+    public SpriteRenderer aliensr;
+    public List<GameObject> aliens;
+  
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +27,18 @@ public class bulletspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(time > 2)
+        {
+            
+            SpawnedAlien = Instantiate(AlienPrefab, new Vector2(Random.Range(-20f, 20f), Random.Range(-18f, -16f)), Quaternion.identity);
+            aliensr = GetComponent<SpriteRenderer>();
+            aliens.Add(SpawnedAlien);
+            time = 0;
+        }
+        else
+        {
+            time += 1 *Time.deltaTime;
+        }
     }
 
     public void SpawnBullet()
