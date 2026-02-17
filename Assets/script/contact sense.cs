@@ -8,7 +8,11 @@ public class contactsense : MonoBehaviour
     public UnityEvent enteredHazard;
     public UnityEvent exitHazard;
 
+    public Transform shooter;
+
     public UnityEvent<float> rando;
+
+    public GameObject arrowsPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,5 +55,9 @@ public class contactsense : MonoBehaviour
     public void shownum(float number)
     {
         Debug.Log(number);
+    }
+    public void arrows()
+    {
+        Instantiate(arrowsPrefab,shooter.position,shooter.transform.rotation);
     }
 }
